@@ -494,10 +494,10 @@ body {
         border: solid;
         -webkit-border-radius: 8px;
         border-radius: 8px;
-        border-width: .1em;
+        border-width: 0.1em;
         padding: 30px;
         padding-top: 20px;
-        opacity: .98;
+        opacity: 0.98;
         text-decoration: none; }
       .header-large--wrap .header--blue-bg .header--meta-content .banner-button {
         border: solid;
@@ -802,7 +802,7 @@ header.header-main {
       opacity: 0.95;
       color: #447bdc; }
       header.header-main .\--wrap .button::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;

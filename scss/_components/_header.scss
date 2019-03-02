@@ -19,12 +19,16 @@ body {
     color: rgb(244, 244, 248) !important;
   }
   .header--blue-bg {
-    background-image: linear-gradient(0deg, rgba(29, 156, 252, .9) -10%, rgba(30, 66, 125, 1) 100%);
+    background-image: linear-gradient(
+      0deg,
+      rgba(29, 156, 252, 0.9) -10%,
+      rgba(30, 66, 125, 1) 100%
+    );
     width: 100%;
     height: 100%;
 
     .\--image {
-      background-image: url('https://images.plot.ly/excel/plotlyjs/plotlyjs-banner-background.png');
+      background-image: url("https://images.plot.ly/excel/plotlyjs/plotlyjs-banner-background.png");
       background-repeat: no-repeat;
       background-size: cover;
       max-width: 100%;
@@ -47,7 +51,7 @@ body {
       margin: 0 auto;
       width: 80%;
       margin-top: 80px;
-      padding: $unit*3;
+      padding: $unit * 3;
       flex-wrap: wrap;
       justify-content: center;
       p {
@@ -59,24 +63,24 @@ body {
       }
       .github-star {
         width: 100%;
-        margin-top: $unit*2;
+        margin-top: $unit * 2;
         display: flex;
         justify-content: center;
         padding: $unit 0;
       }
-      .banner{
+      .banner {
         display: block;
         text-align: center;
         font-size: 1.4rem;
         border: solid;
         border-radius: 8px;
-        border-width: .1em;
+        border-width: 0.1em;
         padding: 30px;
         padding-top: 20px;
-        opacity: .98;
+        opacity: 0.98;
         text-decoration: none;
       }
-      .banner-button{
+      .banner-button {
         border: solid;
         border-radius: 6px;
         padding: 7px;
@@ -103,7 +107,8 @@ body {
         background: transparent;
         transition: background 0.2s ease-in-out 0s;
 
-        &::before, &::after {
+        &::before,
+        &::after {
           background: $grey;
         }
       }
@@ -114,7 +119,8 @@ body {
       background: white;
       transition: background 0.2s ease-in-out 0s;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         background: white;
       }
     }
@@ -124,7 +130,8 @@ body {
       span {
         background: $grey;
         transition: background 0.2s ease-in-out 0s;
-        &::before, &::after {
+        &::before,
+        &::after {
           background: $grey;
         }
       }
@@ -136,12 +143,12 @@ body {
     }
   }
   a {
-    &:link, &:visited, &:active {
+    &:link,
+    &:visited,
+    &:active {
       color: currentColor !important;
     }
-
   }
-
 }
 
 header {
@@ -159,7 +166,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: $unit*2;
+    padding: $unit * 2;
     height: 80px;
     &.mobile-menu {
       .\--wrap .\--nav-mobile {
@@ -173,43 +180,44 @@ header {
         li:not(.tablet) {
           @include tablet {
             display: none !important;
-
           }
           @include handheld {
             display: flex !important;
           }
         }
-
       }
     }
     * {
       text-decoration: none !important;
       //display: none;
       //font-size: 14px !important;
-
     }
     &.\--white {
       color: white !important;
       border-bottom: 0;
       a {
-        &:link, &:visited, &:active {
+        &:link,
+        &:visited,
+        &:active {
           color: currentColor !important;
           text-decoration: none !important;
         }
-
+        &:hover {
+          color: #09ffff;
+        }
       }
     }
 
     &.\--default {
       color: $grey !important;
       a:not(.button) {
-        &:link, &:visited, &:active {
+        &:link,
+        &:visited,
+        &:active {
           color: currentColor !important;
         }
-
       }
       background-color: #fff;
-
     }
     .\--wrap {
       display: flex;
@@ -307,7 +315,7 @@ header {
 
           li {
             min-width: 100%;
-            padding: $unit*2;
+            padding: $unit * 2;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -340,10 +348,15 @@ header {
             .\--item {
               display: flex;
               position: relative;
+              padding-left: 24px;
+              font-weight: 500;
+              margin-left: 24px;
+              letter-spacing: 2px;
+
               .icon {
                 position: absolute;
                 top: 0;
-                right: -$unit*2;
+                right: -$unit * 2;
                 margin-top: -3px;
                 margin-left: -3px;
                 transform: scale(0.75);
@@ -354,8 +367,13 @@ header {
                 }
               }
             }
+
             a {
               display: flex;
+            }
+
+            a:hover {
+              color: #09ffff;
             }
           }
         }
@@ -380,7 +398,7 @@ header {
         opacity: 0.95;
         color: $blue;
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 100%;
@@ -399,7 +417,6 @@ header {
             opacity: 1;
           }
         }
-
       }
 
       .\-hamburger-btn {
